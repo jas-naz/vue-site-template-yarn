@@ -1,23 +1,23 @@
-// var PrerenderSpaPlugin = require('prerender-spa-plugin')
-// var path = require('path')
+var PrerenderSpaPlugin = require('prerender-spa-plugin')
+var path = require('path')
 
-// module.exports = {
-//     configureWebpack: config => {
+module.exports = {
+    configureWebpack: config => {
 
-//         if (process.env.NODE_ENV !== 'production') return
+        if (process.env.NODE_ENV !== 'production') return
 
-//         return {
-//             plugins: [
-//                 new PrerenderSpaPlugin(
+        return {
+            plugins: [
+                new PrerenderSpaPlugin(
                 
-//                     path.resolve(__dirname, 'dist'), 
+                    path.resolve(__dirname, 'dist'), 
                 
-//                     [ '/', '/about', '/portfolio/one', '/portfolio/two', '/portfolio/three' ], 
-//                     {
+                    [ '/', '/about', '/portfolio/one', '/portfolio/two', '/portfolio/three' ], 
+                    {
                         
-//                     }
-//                 )
-//             ]
-//         }
-//     }
-// }
+                    }
+                )
+            ]
+        }
+    }
+}

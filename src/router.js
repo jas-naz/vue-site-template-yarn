@@ -34,6 +34,10 @@ export default new Router({
       path: '/portfolio/three',
       name: 'three',
       component: Three
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ],
   mode: 'history'
